@@ -1,0 +1,50 @@
+openapi: 3.0.3
+info:
+  title: Demo
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000
+    variables: {}
+paths:
+  /ping:
+    get:
+      responses:
+        "200":
+          description: OK
+  /users/{id}:
+    get:
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: integer
+          required: true
+          description: User ID of the user
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  name:
+                    type: string
+                example:
+                  id: 1
+                  name: User 01
+        "404":
+          description: User not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  name:
+                    type: string
+                example:
+                  message: User not found
