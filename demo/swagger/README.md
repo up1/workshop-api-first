@@ -31,7 +31,13 @@ $npm start
 * Access to API Document with `http://localhost:8080/docs`
 
 
-## Mock server from Swagger with OpenAPI Mocker
+## Generate HTML with Redocly
+```
+$npm i -g @redocly/cli 
+$redocly lint api.yml
+```
+
+## Mock server with OpenAPI Mocker
 ```
 $npm i -g open-api-mocker
 $open-api-mocker -s api.yml -w
@@ -39,8 +45,3 @@ $open-api-mocker -s api.yml -w
 
 Access to api from `http://localhost:5000`
 
-## Generate HTML with Redocly
-```
-$npm i -g @redocly/cli 
-$redocly lint api.yml
-```
