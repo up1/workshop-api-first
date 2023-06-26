@@ -1,0 +1,40 @@
+FORMAT: 1A
+HOST: http://localhost:3000
+
+# Demo API
+
+Demo APIs for API-first solution !!.
+
+# Ping service [/ping]
+## Ping [GET]
++ Response 200
+
+# Get user by id [/users/{id}]
+
++ Parameters
+    + id
+
+## Get user by id [GET]
++ Response 200 (application/json)
+    + Body
+    
+            {
+              "id": 1,
+              "name": "User 01"
+            }
+    
+    + Schema
+
+            {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    }
+                    "name": {
+                        "type": "string"
+                    }
+                }
+            }
+
