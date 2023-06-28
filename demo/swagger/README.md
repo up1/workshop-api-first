@@ -35,6 +35,7 @@ $npm start
 ```
 $npm i -g @redocly/cli 
 $redocly lint api.yml
+$redocly build-docs api.yml
 ```
 
 ## Mock server with OpenAPI Mocker
